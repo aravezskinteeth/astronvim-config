@@ -8,6 +8,24 @@
 
 ## 🌟 Screenshots
 
+## ✨ Features
+
+### Core
+
+- Statusline, Winbar, and Tabline with [Heirline](https://github.com/rebelot/heirline.nvim)
+- Plugin management with [lazy.nvim](https://github.com/folke/lazy.nvim)
+- Package management with [mason.nvim](https://github.com/williamboman/mason.nvim)
+- File explorer with [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- Autocompletion with [Cmp](https://github.com/hrsh7th/nvim-cmp)
+- Git integration with [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- Terminal with [Toggleterm](https://github.com/akinsho/toggleterm.nvim)
+- Fuzzy finding with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- Syntax highlighting with [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- Formatting and linting with [Null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
+- Language Server Protocol with [Native LSP](https://github.com/neovim/nvim-lspconfig)
+
+### Custom
+
 ## 🛠️ Installation
 
 ### Install AstroNvim
