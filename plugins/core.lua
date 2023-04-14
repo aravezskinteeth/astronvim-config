@@ -2,6 +2,7 @@ return {
   -- customize alpha options
   {
     "goolord/alpha-nvim",
+    enabled = true,
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
@@ -9,7 +10,7 @@ return {
         [[       |,---"-----------------------------"---,|       ]],
         [[       ||___    16 bit....................    ||       ]],
         [[       ||====\ :HHHHHHHHHHHHHHHHHHHHHHHHHHH   ||       ]],
-        [[       ||=====):H c> lvim                 H   ||       ]],
+        [[       ||=====):H c> nvim                 H   ||       ]],
         [[       ||====/ :H ╦  ╦ ╦╔╗╔╔═╗╦═╗╦  ╦╦╔╦╗ H   ||       ]],
         [[       ||      :H ║  ║ ║║║║╠═╣╠╦╝╚╗╔╝║║║║ H   ||       ]],
         [[       ||PORTFO:H ╩═╝╚═╝╝╚╝╩ ╩╩╚═ ╚╝ ╩╩ ╩ H   ||       ]],
@@ -25,6 +26,20 @@ return {
         [[|------"--------------------------------------"-------|]],
         [[`-----------------------------------------------------']],
       }
+      opts.section.header.opts.hl = "DashboardHeader"
+      local button = require("astronvim.utils").alpha_button
+      opts.section.buttons.val = {
+        button("LDR n  ", "  New File  "),
+        button("LDR f f", "  Find File  "),
+        button("LDR f o", "  Recents  "),
+        button("LDR f w", "  Find Word  "),
+        button("LDR f '", "  Bookmarks  "),
+        button("LDR S l", "  Last Session  "),
+      }
+
+      opts.config.layout[1].val = vim.fn.max { 2, vim.fn.floor(vim.fn.winheight(0) * 0.2) }
+      opts.config.layout[3].val = 5
+      opts.config.opts.noautocmd = true
       return opts
     end,
   },
