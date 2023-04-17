@@ -6,39 +6,31 @@ return {
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       ensure_installed = {
-        "asm_lsp", -- Assembly (GAS/NASM, GO)
-        "bashls", -- Bash
-        "clangd", -- C, C++
-        "csharp_ls", -- C#
-        "cmake", -- Cmake
-        "cssls", -- CSS
-        "cssmodules_ls", -- CSS
-        "diagnosticls", -- Diagnostic (general purpose server)
-        "eslint", -- ESLint
-        "golangci_lint_ls", -- Go
-        "gopls", -- Go
-        "html", -- HTML
-        "jsonls", -- JSON
-        "jdtls", -- Java
-        "quick_lint_js", -- JavaScript
-        "tsserver", -- JavaScript, Typescript
-        "vtsls", -- JavaScript, Typescript
+        "asm_lsp",                -- Assembly (GAS/NASM, GO)
+        "bashls",                 -- Bash
+        "clangd",                 -- C, C++
+        "cmake",                  -- Cmake
+        "cssls",                  -- CSS
+        "eslint",                 -- ESLint
+        "gopls",                  -- Go
+        "html",                   -- HTML
+        "jsonls",                 -- JSON
+        "jdtls",                  -- Java
+        "tsserver",               -- JavaScript, Typescript
         -- "julials", -- Julia (needs extra config)
         "kotlin_language_server", -- Kotlin
-        "ltex", -- Latex
-        "texlab", -- Latex
-        "lua_ls", -- Lua
-        "luau_lsp", -- Lua
-        "marksman", -- Markdown
-        "perlnavigator", -- Perl
-        "pyright", -- Python
-        "r_language_server", -- R
-        "sqlls", -- SQL
-        "taplo", -- TOML
-        "tailwindcss", -- Tailwind CSS
-        "volar", -- Vue
-        "lemminx", -- XML
-        "yamlls", -- YAML
+        "ltex",                   -- Latex
+        "lua_ls",                 -- Lua
+        "marksman",               -- Markdown
+        "perlnavigator",          -- Perl
+        "pyright",                -- Python
+        "r_language_server",      -- R
+        "sqlls",                  -- SQL
+        "taplo",                  -- TOML
+        "tailwindcss",            -- Tailwind CSS
+        "volar",                  -- Vue
+        "lemminx",                -- XML
+        "yamlls",                 -- YAML
       },
     },
   },
@@ -84,19 +76,13 @@ return {
     opts = {
       ensure_installed = {
         -- "debugpy", -- Python
-        "python", -- Python
-        "cppdbg", -- Cpp
-        -- "cpptools", -- Cpp
-        "firefox", -- Firefox
-        -- "firefox-debug-adapter", -- Firefox
-        "node2", -- Node
-        -- "node-debug2-adapter", -- Node
-        "js", -- JavaScript
-        -- "js-debug-adapter", -- JavaScript
-        "javadbg", -- Java
-        -- "java-debug-adapter", -- Java
-        "kotlin", -- Kotlin
-        -- "kotlin-debug-adapter", -- Kotlin
+        "python",           -- Python
+        "cppdbg",           -- Cpp
+        "firefox",          -- Firefox
+        "node2",            -- Node
+        "js",               -- JavaScript
+        "javadbg",          -- Java
+        "kotlin",           -- Kotlin
         "go-debug-adapter", -- Go
       },
     },
