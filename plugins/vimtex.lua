@@ -3,7 +3,7 @@ return {
   {
     'lervag/vimtex',
       init = function ()
-        vim.g.vimtex_view_general_viewer = "skim"
+        vim.g.vimtex_view_method = "zathura"
       end,
       event = "BufRead",
   },
