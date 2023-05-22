@@ -6,29 +6,28 @@ return {
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       ensure_installed = {
-        "asm_lsp",                -- Assembly (GAS/NASM, GO)
+        -- "asm_lsp",                -- Assembly (GAS/NASM, GO)
         "bashls",                 -- Bash
         "clangd",                 -- C, C++
         "cmake",                  -- Cmake
         "cssls",                  -- CSS
-        "eslint",                 -- ESLint
-        "gopls",                  -- Go
+        -- "eslint",                 -- JavaScript and JSX        "gopls",                  -- Go
         "html",                   -- HTML
         "jsonls",                 -- JSON
-        "jdtls",                  -- Java
-        "tsserver",               -- JavaScript, Typescript
-        -- "julials", -- Julia (needs extra config)
-        "kotlin_language_server", -- Kotlin
+        -- "jdtls",                  -- Java
+        -- "tsserver",               -- JavaScript, Typescript
+        "julials",                -- Install julia first 
+        -- "kotlin_language_server", -- Kotlin
         "ltex",                   -- Latex
         "lua_ls",                 -- Lua
         "marksman",               -- Markdown
-        "perlnavigator",          -- Perl
+        -- "perlnavigator",          -- Perl
         "pyright",                -- Python
         "r_language_server",      -- R
-        "sqlls",                  -- SQL
+        -- "sqlls",                  -- SQL
         "taplo",                  -- TOML
-        "tailwindcss",            -- Tailwind CSS
-        "volar",                  -- Vue
+        -- "tailwindcss",            -- Tailwind CSS
+        -- "volar",                  -- Vue
         "lemminx",                -- XML
         "yamlls",                 -- YAML
       },
@@ -41,31 +40,31 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
       ensure_installed = {
-        "prettier",
-        "stylua",
-        "rustywind",
-        "xmlformatter",
-        "yamlfmt",
-        "sql-formatter",
-        "reorder-python-imports",
-        "rustfmt",
-        "markdown-toc",
-        "latexindent",
-        "jq",
-        "golines",
-        "gomodifytags",
-        "goimports",
-        "gersemi",
-        "goimports-reviser",
-        "fixjson",
-        "cbfmt",
-        "blue",
-        "autopep8",
-        "beautysh",
-        "shellharden",
-        "markdownlint",
-        "cmakelang",
-        "clang-format",
+        "prettier",               -- General Code Formatter in: JavaScript, TypeScript, Flow, JSX, JSON, CSS, SCSS, Less, HTML, Vue, Angular, GraphQL, Markdown, YAML
+        "stylua",                 -- Lua
+        -- "rustywind",            -- Rust
+        "xmlformatter",           --XML
+        "yamlfmt",                -- YAML
+        -- "sql-formatter",        -- SQL
+        "reorder-python-imports", -- Python
+        -- "rustfmt"                -- Rust,
+        "markdown-toc",           -- Markdown
+        "latexindent",            -- Latex
+        "jq",                     -- JSON 
+        "golines",                -- Go
+        "gomodifytags",           -- Go
+        "goimports",              -- Go
+        "gersemi",                -- cmake formtter
+        "goimports-reviser",      -- Go
+        "fixjson",                -- JSON
+        "cbfmt",                  -- Markdown: Format codblocks
+        "blue",                   -- Python code formatter.
+        "autopep8",               -- Python code to conform to the PEP 8 style guide
+        "beautysh",               -- A Bash beautifier for the masses.
+        "shellharden",            -- Shell
+        "markdownlint",           -- Markdown
+        "cmakelang",              -- CMake
+        "clang-format",           -- Clang
       },
     },
   },
@@ -78,11 +77,11 @@ return {
         -- "debugpy", -- Python
         "python",           -- Python
         "cppdbg",           -- Cpp
-        "firefox",          -- Firefox
-        "node2",            -- Node
+        -- "firefox",          -- Firefox
+        -- "node2",            -- Node
         "js",               -- JavaScript
-        "javadbg",          -- Java
-        "kotlin",           -- Kotlin
+        -- "javadbg",          -- Java
+        -- "kotlin",           -- Kotlin
         "go-debug-adapter", -- Go
       },
     },
