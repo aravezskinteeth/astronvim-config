@@ -2,7 +2,19 @@ return {
   {
     'quarto-dev/quarto-nvim',
     dependencies = {
-      'jmbuhr/otter.nvim',
+      {
+        'jmbuhr/otter.nvim',
+        dev = false,
+        config = function ()
+          require 'otter.config'.setup{
+            lsp = {
+              hover = {
+                border = require 'misc.style'.border
+              }
+            }
+          }
+        end,
+      },
       'neovim/nvim-lspconfig',
       'hrsh7th/nvim-cmp'
     },
