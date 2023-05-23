@@ -12,7 +12,7 @@ return {
       config = function(plugin, opts)
         require "plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
         -- opts parameter is the default options table
-        require("luasnip.loaders.from_lua").lazy_load { paths = { "./user/snippets" } } -- load snippets paths
+        require("luasnip.loaders.from_lua").lazy_load { paths = { "~/.config/nvim/lua/user/snippets" } } -- load snippets paths
       end,
     },
   },
