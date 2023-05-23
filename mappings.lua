@@ -5,7 +5,7 @@
 -- automatically pick-up stored data by this setting.)
 return {
   -- first key is the mode
-  n = {
+  n = { -- normal mode
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
