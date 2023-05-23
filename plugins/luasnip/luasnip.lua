@@ -7,6 +7,7 @@ return {
         enable_autosnippets = true,
         store_selection_keys = "<Tab>",
         region_check_events = 'InsertEnter',
+        delete_check_event = 'InsertLeave',
       },
       config = function(plugin, opts)
         require "plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
