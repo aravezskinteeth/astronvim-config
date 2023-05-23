@@ -50,6 +50,17 @@ return {
     end,
     event = "User AstroFile",
     -- cmd = {"QuartoPreview"},
+    keys = {
+      {
+        "<leader>Qp", "<cmd>:lua require'quarto'.quartoPreview()<cr>", desc = "Preview Quarto Files"
+      },
+      {
+        "<leader>Qc", "<cmd>:lua require'quarto'.quartoClosePreview()<cr>", desc = "Close Quarto Preview"
+      },
+      {
+        "<leader>Qh", ":QuartoHelp", desc = "Quarto Help"
+      }
+    }
   },
   -- send code from python/r/qmd documents to a terminal like ipython, R, bash
   { 'jpalardy/vim-slime' },
