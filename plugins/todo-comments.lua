@@ -69,5 +69,6 @@ return {
     },
     -- Load plugin every time you open a file
     event = "User AstroFile",
+    cmd = {"TodoQuickFix"},
   },
 }
