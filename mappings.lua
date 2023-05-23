@@ -26,7 +26,7 @@ return {
     -- Example
     ["<leader>a"] = { "<cmd>echo 'Hello world!'<cr>", desc = "Say hello world" },
   },
-  t = {
+  t = { -- terminal mode
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
