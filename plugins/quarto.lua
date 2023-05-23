@@ -47,7 +47,9 @@ return {
           definition = 'gd'
         }
       }
-    end
+    end,
+    event = "User AstroFile",
+    -- cmd = {"QuartoPreview"},
   },
   -- send code from python/r/qmd documents to a terminal like ipython, R, bash
   { 'jpalardy/vim-slime' },
