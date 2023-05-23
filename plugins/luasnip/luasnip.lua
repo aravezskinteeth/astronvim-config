@@ -3,6 +3,7 @@ return {
     { -- override LuaSnip
       "L3MON4D3/LuaSnip",
       opts = {
+        history = false,
         enable_autosnippets = true,
       },
       config = function(plugin, opts)
