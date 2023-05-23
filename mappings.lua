@@ -20,6 +20,20 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    -- quarto preview
+    ["<leader>qp"] = {
+      function ()
+        local quarto = require'quarto'
+        quarto.setup(
+          {
+            "quarto.quartoPreview<cr>",
+            desc = "Quarto Preview",
+            silent = true,
+            noremap = true
+          }
+        )
+      end
+    }
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
