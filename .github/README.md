@@ -26,11 +26,14 @@
 
 ➡️  [Click here](https://astronvim.com/acknowledgements) For a full list of plugins used by *AstroNvim*.
 
+
+
 ### Custom
 
 | Plugin | Feature |
 | ------ | ------- |
 | Glow   | Preview markdown files with pizzaz 🪄|
+
 
 ## 🛠️ Installation
 
