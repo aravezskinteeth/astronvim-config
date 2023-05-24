@@ -20,6 +20,16 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    -- quarto menu
+    ["<leader>Q"] = { name = "󱨋 Quarto" },
+    -- quarto send
+    ["<leader>Qs"] = { name = "󱓵 Quarto Send" },
+    -- glow
+    ["<leader>G"] = { name = " Glow" },
+    -- markdown preview
+    ["<leader>M"] = { name = "󰍔 Preview Markdown" },
+    -- vimtex
+    ["<leader>V"] = { name = "󰿈 VimTex" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     -- quit
