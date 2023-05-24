@@ -34,7 +34,7 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     -- quit
     -- Example
-    ["<leader>a"] = { "<cmd>echo 'Hello world!'<cr>", desc = "Say hello world" },
+    -- ["<leader>a"] = { "<cmd>echo 'Hello world!'<cr>", desc = "Say hello world" },
   },
   t = { -- terminal mode
     -- setting a mapping to false will disable it
