@@ -24,7 +24,7 @@
 - Formatting and linting with [Null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
 - Language Server Protocol with [Native LSP](https://github.com/neovim/nvim-lspconfig)
 
-    ➡️  [Click here](https://astronvim.com/acknowledgements) For a full list of plugins used by *AstroNvim*.
+➡️  [Click here](https://astronvim.com/acknowledgements) For a full list of plugins used by *AstroNvim*.
 
 ### Custom
 
