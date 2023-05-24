@@ -5,15 +5,16 @@ return {
     enabled = true,
     opts = function(_, opts)
       -- customize the dashboard header
+      -- Calvin S: https://patorjk.com/software/taag/
       opts.section.header.val = {
         [[        _______________________________________        ]],
         [[       |,---"-----------------------------"---,|       ]],
         [[       ||___    16 bit....................    ||       ]],
         [[       ||====\ :HHHHHHHHHHHHHHHHHHHHHHHHHHH   ||       ]],
         [[       ||=====):H c> nvim                 H   ||       ]],
-        [[       ||====/ :H ╦  ╦ ╦╔╗╔╔═╗╦═╗╦  ╦╦╔╦╗ H   ||       ]],
-        [[       ||      :H ║  ║ ║║║║╠═╣╠╦╝╚╗╔╝║║║║ H   ||       ]],
-        [[       ||PORTFO:H ╩═╝╚═╝╝╚╝╩ ╩╩╚═ ╚╝ ╩╩ ╩ H   ||       ]],
+        [[       ||====/ :H ╔═╗╔═╗╔╦╗╦═╗╔═╗╦  ╦╦╔╦╗ H   ||       ]],
+        [[       ||      :H ╠═╣╚═╗ ║ ╠╦╝║ ║╚╗╔╝║║║║ H   ||       ]],
+        [[       ||PORTFO:H ╩ ╩╚═╝ ╩ ╩╚═╚═╝ ╚╝ ╩╩ ╩ H   ||       ]],
         [[       ||      :HHHHHHHHHHHHHHHHHHHHHHHHHHH   ||       ]],
         [[       ||_____,_________________________,_____||       ]],
         [[       |)_____)-----.| /I\ATARI |.------(_____(|       ]],
