@@ -11,6 +11,14 @@ return {
     ft = {
       "markdown"
     },
+    keys = {
+      {
+        "<leader>Mp", "<cmd>:MardownPreview<cr>", desc = "Preview"
+      },
+      {
+        "<leader>Ms", "<cmd>:MardownPreviewStop<cr>", desc = "Stop Preview"
+      }
+    },
     event = "User AstroFile",
   }
 }
