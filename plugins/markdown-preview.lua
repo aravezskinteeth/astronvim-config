@@ -13,10 +13,10 @@ return {
     },
     keys = {
       {
-        "<leader>Mp", "<cmd>:MardownPreview<cr>", desc = "Preview"
+        "<leader>Mp", "<cmd>:MarkdownPreview<cr>", desc = "Preview"
       },
       {
-        "<leader>Ms", "<cmd>:MardownPreviewStop<cr>", desc = "Stop Preview"
+        "<leader>Ms", "<cmd>:MarkdownPreviewStop<cr>", desc = "Stop Preview"
       }
     },
     event = "User AstroFile",
