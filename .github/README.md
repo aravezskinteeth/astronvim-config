@@ -25,6 +25,7 @@
 - Language Server Protocol with [Native LSP](https://github.com/neovim/nvim-lspconfig)
 
     ➡️  [Click here](https://astronvim.com/acknowledgements) For a full list of plugins used by *AstroNvim*.
+
 ### Custom
 
 | Plugin | Feature |
