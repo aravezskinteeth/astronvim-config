@@ -49,16 +49,30 @@ return {
       }
     end,
     event = "User AstroFile",
-    -- cmd = {"QuartoPreview"},
     keys = {
       {
-        "<leader>Qp", "<cmd>:lua require'quarto'.quartoPreview()<cr>", desc = "Preview Quarto Files"
+        "<leader>Qp", "<cmd>:lua require'quarto'.quartoPreview()<cr>", desc = "Preview Files"
       },
       {
-        "<leader>Qc", "<cmd>:lua require'quarto'.quartoClosePreview()<cr>", desc = "Close Quarto Preview"
+        "<leader>Qc", "<cmd>:lua require'quarto'.quartoClosePreview()<cr>", desc = "Close Preview"
       },
       {
-        "<leader>Qh", ":QuartoHelp", desc = "Quarto Help"
+        "<leader>Qh", "<cmd>:QuartoHelp<cr>", desc = "Help"
+      },
+      {
+        "<leader>Qa", "<cmd>:QuartoActivate<cr>", desc = "Activate"
+      },
+      {
+        "<leader>Qd", "<cmd>:QuartoDiagnostics<cr>", desc = "Diagnostics"
+      },
+      {
+        "<leader>QK", "<cmd>:QuartoHover<cr>", desc = "Hover"
+      },
+      {
+        "<leader>Qsa", "<cmd>:QuartoSendAbove<cr>", desc = "Send Above"
+      },
+      {
+        "<leader>QsA", "<cmd>:QuartoSendAll<cr>", desc = "Send All"
       }
     }
   },
