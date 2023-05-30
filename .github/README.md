@@ -26,14 +26,20 @@
 
 ➡️  [Click here](https://astronvim.com/acknowledgements) For a full list of plugins used by *AstroNvim*.
 
-
+➡️  [Click here](https://astronvim.com/Basic%20Usage/mappings) For a full list of default mappings used by *AstroNvim*.
 
 ### Custom
 
+🔬 Tailored for Academics! <br>
+🎨 Color Scheme with [Catppuccin 😸](https://github.com/catppuccin/nvim)
+
 | Plugin | Feature |
 | ------ | ------- |
-| Glow   | Preview markdown files with pizzaz 🪄|
-
+| [Todo Comments](https://github.com/folke/todo-comments.nvim)| ✅ Highlight, list and search todo comments in your projects|
+| [VimTex](https://github.com/lervag/vimtex)| Preview LaTeX files with your favorite PDF editor!|
+| [Glow](https://github.com/ellisonleao/glow.nvim)| Preview markdown files with pizzaz 🪄|
+| [Markdown Preview](https://github.com/iamcco/markdown-preview.nvim) | Live preview Markdown files on your browser 🌐|
+| [Quarto](https://github.com/quarto-dev/quarto-nvim)| Open-source scientific and technical publishing system built on Pandoc |
 
 ## 🛠️ Installation
 
