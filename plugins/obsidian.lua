@@ -1,151 +1,138 @@
 return {
   "epwalsh/obsidian.nvim",
-  -- lazy = true,
-  -- event = { "BufReadPre path/to/my-vault/**.md" },
-  -- keys = {
-  --   {
-  --     "<leader>Ob", "<cmd>:ObsidianBacklinks<cr>", desc = "Getting a location list of references for current buffers"
-  --   },
-  --   {
-  --     "<leader>Ot", "<cmd>:ObsidianToday<cr>", desc = "Create Daily Note"
-  --   },
-  --   {
-  --     "<leader>Oy", "<cmd>:ObsidianYesterday<cr>", desc = "Open Yesterday's Daily Note"
-  --   },
-  --   {
-  --     "<leader>Oo", "<cmd>:ObsidianOpen<cr>", desc = "Open Note in Obsidian App"
-  --   },
-  --   {
-  --     "<leader>On", "<cmd>:ObsidianNew<cr>", desc = "Create a New Note"
-  --   },
-  --   {
-  --     "<leader>Os", "<cmd>:ObsidianSearch<cr>", desc = "Search Notes in your vault"
-  --   },
-  --   {
-  --     "<leader>Oq", "<cmd>:ObsidianQuickSwitch<cr>", desc = "Quick Switch to another Note in your vault"
-  --   },
-  --   {
-  --     "<leader>Oll", "<cmd>:ObsidianLink<cr>", desc = "To link an in-line visual selection of text to a note."
-  --   },
-  --   {
-  --     "<leader>Oln", "<cmd>:ObsidianLinkNew<cr>", desc = "To create a new note and link it to an in-line visual selection of text."
-  --   },
-  --   {
-  --     "<leader>Olf", "<cmd>:ObsidianFollowLink<cr>", desc = "To follow a note reference under the cursor."
-  --   },
-  --   {
-  --     "<leader>OT", "<cmd>:ObsidianTemplate<cr>", desc = "To insert a template from the templates folder"
-  --   },
-  -- },
-  -- -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand':
-  -- -- event = { "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md" },
-  -- dependencies = {
-  --   -- Required.
-  --   "nvim-lua/plenary.nvim",
-  --
-  --   -- Optional, for completion.
-  --   "hrsh7th/nvim-cmp",
-  --
-  --   -- Optional, for search and quick-switch functionality.
-  --   "nvim-telescope/telescope.nvim",
-  --
-  --   -- Optional, an alternative to telescope for search and quick-switch functionality.
-  --   -- "ibhagwan/fzf-lua"
-  --
-  --   -- Optional, another alternative to telescope for search and quick-switch functionality.
-  --   -- "junegunn/fzf",
-  --   -- "junegunn/fzf.vim"
-  --
-  --   -- Optional, alternative to nvim-treesitter for syntax highlighting.
-  --   "godlygeek/tabular",
-  --   "preservim/vim-markdown",
-  -- },
-  cmd = {
-    "ObsdianBacklinks", -- for getting a location list of references to the current buffer.
-    "ObsidianToday", -- to create a new daily note.
-    "ObsidianYesterday", -- to open (eventually creating) the daily note for the previous working day.
-    "ObsidianOpen", -- to open a note in the Obsidian app. This command has one optional argument: the ID, path, or alias of the note to open. If not given, the note corresponding to the current buffer is opened.
-    "ObsidianNew", -- to create a new note. This command has one optional argument: the title of the new note.
-    "ObsidianSearch", -- to search for notes in your vault using ripgrep with fzf.vim, fzf-lua or telescope.nvim. This command has one optional argument: a search query to start with.
-    "ObsidianQuickSwitch", -- to quickly switch to another notes in your vault, searching by its name using fzf.vim, fzf-lua or telescope.nvim.
-    "ObsidianLink", -- to link an in-line visual selection of text to a note. This command has one optional argument: the ID, path, or alias of the note to link to. If not given, the selected text will be used to find the note with a matching ID, path, or alias.
-    "ObsidianLinkNew", -- to create a new note and link it to an in-line visual selection of text. This command has one optional argument: the title of the new note. If not given, the selected text will be used as the title.
-    "ObsidianFollowLink", -- to follow a note reference under the cursor.
-    "ObsidianTemplate", -- to insert a template from the templates folder, selecting from a list using telescope.nvim or one of the fzf alternatives.
---   },
---   opts = {
---     dir = "/Volumes/LIVISU/livs/markdown/obsidian-parent/eden/", -- no need to call 'vim.fn.expand' here
---
---     -- Optional, if you keep notes in a specific subdirectory of your vault.
---     -- notes_subdir = "notes",
---
---     daily_notes = {
---       -- Optional, if you keep daily notes in a separate directory.
---       folder = "notes/dailies",
---       -- Optional, if you want to change the date format for daily notes.
---       date_format = "%d-%m-%Y"
---     },
---     completion = {
---       nvim_cmp = true, -- if using nvim-cmp, otherwise set to false
---    },
---
---     -- Optional, set to true if you don't want Obsidian to manage frontmatter.
---     disable_frontmatter = false,
---
---     -- Optional, alternatively you can customize the frontmatter data.
---     note_frontmatter_func = function(note)
---       -- This is equivalent to the default frontmatter function.
---       local out = { id = note.id, aliases = note.aliases, tags = note.tags }
---       -- `note.metadata` contains any manually added fields in the frontmatter.
---       -- So here we just make sure those fields are kept in the frontmatter.
---       if note.metadata ~= nil and require("obsidian").util.table_length(note.metadata) > 0 then
---         for k, v in pairs(note.metadata) do
---           out[k] = v
---         end
---       end
---       return out
---     end,
---
---     -- Optional, for templates (see below).
---     templates = {
---       subdir = "home/templates",
---       date_format = "%d-%m-%Y",
---       time_format = "%H:%M",
---     },
---
---     -- Optional, by default when you use `:ObsidianFollowLink` on a link to an external
---     -- URL it will be ignored but you can customize this behavior here.
---     follow_url_func = function(url)
---       -- Open the URL in the default web browser.
---       vim.fn.jobstart({"open", url})  -- Mac OS
---       -- vim.fn.jobstart({"xdg-open", url})  -- linux
---     end,
---
---     -- Optional, set to true if you use the Obsidian Advanced URI plugin.
---     -- https://github.com/Vinzent03/obsidian-advanced-uri
---     use_advanced_uri = false,
---
---     -- Optional, set to true to force ':ObsidianOpen' to bring the app to the foreground.
---     open_app_foreground = false,
---
---     -- Optional, by default commands like `:ObsidianSearch` will attempt to use
---     -- telescope.nvim, fzf-lua, and fzf.nvim (in that order), and use the
---     -- first one they find. By setting this option to your preferred
---     -- finder you can attempt it first. Note that if the specified finder
---     -- is not installed, or if it the command does not support it, the
---     -- remaining finders will be attempted in the original order.
---     finder = "telescope.nvim",
---   },
---   config == function(_, opts)
---     require("obsidian").setup(opts)
---     -- Optional, override the 'gf' keymap to utilize Obsidian's search functionality.
---     -- see also: 'follow_url_func' config option above.
---     vim.keymap.set("n", "gf", function()
---       if require("obsidian").util.cursor_on_markdown_link() then
---         return "<cmd>ObsidianFollowLink<CR>"
---       else
---         return "gf"
---       end
---     end, { noremap = false, expr = true })
---   end,
--- }
+  lazy = true,
+  event = { "BufReadPre path/to/my-vault/**.md" },
+  keys = {
+    {
+      "<leader>Ob", "<cmd>:ObsidianBacklinks<cr>", desc = "Getting a location list of references for current buffers"
+    },
+    {
+      "<leader>Ot", "<cmd>:ObsidianToday<cr>", desc = "Create Daily Note"
+    },
+    {
+      "<leader>Oy", "<cmd>:ObsidianYesterday<cr>", desc = "Open Yesterday's Daily Note"
+    },
+    {
+      "<leader>Oo", "<cmd>:ObsidianOpen<cr>", desc = "Open Note in Obsidian App"
+    },
+    {
+      "<leader>On", "<cmd>:ObsidianNew<cr>", desc = "Create a New Note"
+    },
+    {
+      "<leader>Os", "<cmd>:ObsidianSearch<cr>", desc = "Search Notes in your vault"
+    },
+    {
+      "<leader>Oq", "<cmd>:ObsidianQuickSwitch<cr>", desc = "Quick Switch to another Note in your vault"
+    },
+    {
+      "<leader>Oll", "<cmd>:ObsidianLink<cr>", desc = "To link an in-line visual selection of text to a note."
+    },
+    {
+      "<leader>Oln", "<cmd>:ObsidianLinkNew<cr>", desc = "To create a new note and link it to an in-line visual selection of text."
+    },
+    {
+      "<leader>Olf", "<cmd>:ObsidianFollowLink<cr>", desc = "To follow a note reference under the cursor."
+    },
+    {
+      "<leader>OT", "<cmd>:ObsidianTemplate<cr>", desc = "To insert a template from the templates folder"
+    },
+  },
+  -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand':
+  -- event = { "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md" },
+  dependencies = {
+    -- Required.
+    "nvim-lua/plenary.nvim",
+
+    -- Optional, for completion.
+    "hrsh7th/nvim-cmp",
+
+    -- Optional, for search and quick-switch functionality.
+    "nvim-telescope/telescope.nvim",
+
+    -- Optional, an alternative to telescope for search and quick-switch functionality.
+    -- "ibhagwan/fzf-lua"
+
+    -- Optional, another alternative to telescope for search and quick-switch functionality.
+    -- "junegunn/fzf",
+    -- "junegunn/fzf.vim"
+
+    -- Optional, alternative to nvim-treesitter for syntax highlighting.
+    "godlygeek/tabular",
+    "preservim/vim-markdown",
+  },
+    opts = {
+    dir = "/Volumes/LIVISU/livs/markdown/obsidian-parent/eden/", -- no need to call 'vim.fn.expand' here
+
+    -- Optional, if you keep notes in a specific subdirectory of your vault.
+    -- notes_subdir = "notes",
+
+    daily_notes = {
+      -- Optional, if you keep daily notes in a separate directory.
+      folder = "notes/dailies",
+      -- Optional, if you want to change the date format for daily notes.
+      date_format = "%d-%m-%Y"
+    },
+    completion = {
+      nvim_cmp = true, -- if using nvim-cmp, otherwise set to false
+   },
+
+    -- Optional, set to true if you don't want Obsidian to manage frontmatter.
+    disable_frontmatter = false,
+
+    -- Optional, alternatively you can customize the frontmatter data.
+    note_frontmatter_func = function(note)
+      -- This is equivalent to the default frontmatter function.
+      local out = { id = note.id, aliases = note.aliases, tags = note.tags }
+      -- `note.metadata` contains any manually added fields in the frontmatter.
+      -- So here we just make sure those fields are kept in the frontmatter.
+      if note.metadata ~= nil and require("obsidian").util.table_length(note.metadata) > 0 then
+        for k, v in pairs(note.metadata) do
+          out[k] = v
+        end
+      end
+      return out
+    end,
+
+    -- Optional, for templates (see below).
+    templates = {
+      subdir = "home/templates",
+      date_format = "%d-%m-%Y",
+      time_format = "%H:%M",
+    },
+
+    -- Optional, by default when you use `:ObsidianFollowLink` on a link to an external
+    -- URL it will be ignored but you can customize this behavior here.
+    follow_url_func = function(url)
+      -- Open the URL in the default web browser.
+      vim.fn.jobstart({"open", url})  -- Mac OS
+      -- vim.fn.jobstart({"xdg-open", url})  -- linux
+    end,
+
+    -- Optional, set to true if you use the Obsidian Advanced URI plugin.
+    -- https://github.com/Vinzent03/obsidian-advanced-uri
+    use_advanced_uri = false,
+
+    -- Optional, set to true to force ':ObsidianOpen' to bring the app to the foreground.
+    open_app_foreground = false,
+
+    -- Optional, by default commands like `:ObsidianSearch` will attempt to use
+    -- telescope.nvim, fzf-lua, and fzf.nvim (in that order), and use the
+    -- first one they find. By setting this option to your preferred
+    -- finder you can attempt it first. Note that if the specified finder
+    -- is not installed, or if it the command does not support it, the
+    -- remaining finders will be attempted in the original order.
+    finder = "telescope.nvim",
+  },
+  config == function(_, opts)
+    require("obsidian").setup(opts)
+    -- Optional, override the 'gf' keymap to utilize Obsidian's search functionality.
+    -- see also: 'follow_url_func' config option above.
+    vim.keymap.set("n", "gf", function()
+      if require("obsidian").util.cursor_on_markdown_link() then
+        return "<cmd>ObsidianFollowLink<CR>"
+      else
+        return "gf"
+      end
+    end, { noremap = false, expr = true })
+  end,
+}
