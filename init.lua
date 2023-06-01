@@ -20,12 +20,12 @@ return {
   colorscheme = "catppuccin-macchiato",
   -- add new user interface icon
   icons = {
-    VimIcon = "",
-    ScrollText = "",
-    GitBranch = "",
-    GitAdd = "",
-    GitChange = "",
-    GitDelete = "",
+    VimIcon = " ",
+    ScrollText = " ",
+    GitBranch = " ",
+    GitAdd = " ",
+    GitChange = " ",
+    GitDelete = " ",
   },
   -- modify variables used by heirline but not defined in the setup call directly
   heirline = {
