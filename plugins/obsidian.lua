@@ -1,7 +1,9 @@
 return {
   "epwalsh/obsidian.nvim",
   lazy = true,
-  event = { "BufReadPre path/to/my-vault/**.md" },
+  event = { "BufReadPre /Volumes/LIVISU/livs/markdown/obsidian-parent/eden/**.md" },
+  -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand':
+  -- event = { "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md" },
   keys = {
     {
       "<leader>Ob", "<cmd>:ObsidianBacklinks<cr>", desc = "Getting a location list of references for current buffers"
@@ -37,9 +39,7 @@ return {
       "<leader>OT", "<cmd>:ObsidianTemplate<cr>", desc = "To insert a template from the templates folder"
     },
   },
-  -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand':
-  -- event = { "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md" },
-  dependencies = {
+    dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
 
@@ -48,27 +48,13 @@ return {
 
     -- Optional, for search and quick-switch functionality.
     "nvim-telescope/telescope.nvim",
-
-    -- Optional, an alternative to telescope for search and quick-switch functionality.
-    -- "ibhagwan/fzf-lua"
-
-    -- Optional, another alternative to telescope for search and quick-switch functionality.
-    -- "junegunn/fzf",
-    -- "junegunn/fzf.vim"
-
-    -- Optional, alternative to nvim-treesitter for syntax highlighting.
-    "godlygeek/tabular",
-    "preservim/vim-markdown",
-  },
+    },
     opts = {
     dir = "/Volumes/LIVISU/livs/markdown/obsidian-parent/eden/", -- no need to call 'vim.fn.expand' here
 
-    -- Optional, if you keep notes in a specific subdirectory of your vault.
-    -- notes_subdir = "notes",
-
     daily_notes = {
       -- Optional, if you keep daily notes in a separate directory.
-      folder = "notes/dailies",
+      folder = "personal-management/diary",
       -- Optional, if you want to change the date format for daily notes.
       date_format = "%d-%m-%Y"
     },
@@ -123,16 +109,4 @@ return {
     -- remaining finders will be attempted in the original order.
     finder = "telescope.nvim",
   },
-  config == function(_, opts)
-    require("obsidian").setup(opts)
-    -- Optional, override the 'gf' keymap to utilize Obsidian's search functionality.
-    -- see also: 'follow_url_func' config option above.
-    vim.keymap.set("n", "gf", function()
-      if require("obsidian").util.cursor_on_markdown_link() then
-        return "<cmd>ObsidianFollowLink<CR>"
-      else
-        return "gf"
-      end
-    end, { noremap = false, expr = true })
-  end,
 }
