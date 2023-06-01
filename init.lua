@@ -16,6 +16,8 @@ return {
       --   ["remote3"] = "github_user", -- GitHub user assume AstroNvim fork
     },
   },
+   -- Set colorscheme to use
+  colorscheme = "catppuccin-macchiato",
   -- add new user interface icon
   icons = {
     VimIcon = "",
@@ -172,8 +174,6 @@ return {
       end,
     },
   },
-   -- Set colorscheme to use
-  colorscheme = "catppuccin-macchiato",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
