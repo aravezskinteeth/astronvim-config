@@ -27,9 +27,11 @@ return {
     -- glow
     ["<leader>G"] = { name = " Glow" },
     -- markdown preview
-    ["<leader>M"] = { name = "󰍔 Preview Markdown" },
+    ["<leader>M"] = { name = "󰍔 Markdown Preview" },
     -- vimtex
     ["<leader>V"] = { name = "󰿈 VimTex" },
+    ["<leader>O"] = { name = "󰇈 Obsidian"},
+    ["<leader>Ol"] = { name = "󰮊 Obsidian Link" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     -- quit
