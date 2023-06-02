@@ -78,6 +78,7 @@ return {
   },
   { 'nvim-treesitter/nvim-treesitter' },
   { 'nvim-treesitter/nvim-treesitter-textobjects' },
+  { 'neovim/nvim-lspconfig' },
   -- send code from python/r/qmd documents to a terminal like ipython, R, bash
   { 'jpalardy/vim-slime' },
   -- paste an image to markdown from clipboard
