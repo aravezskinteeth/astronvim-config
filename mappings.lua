@@ -17,6 +17,13 @@ return {
       end,
       desc = "Pick to close",
     },
+    ["<esc>"] = { "<cmd>noh<cr>", desc = "Remove search highlight"},
+    ["<c-LeftMouse>"] = { '<cmd>lua vim.lsp.buf.definition()<cr>', desc = "Go to Deinition"},
+    ["<c-q>"] = { '<cmd>q<cr>', desc = "Close buffer" },
+    ["n"] = { "nzzzv", desc = "Center search" },
+    ["gN"] = { "Nzzzv", desc = "Center search " },
+    ["gl"] = { '<c-]>', desc = 'Open help link' },
+    ['gf'] = { ':e <cfile><CR>', desc = 'Edit file' },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
