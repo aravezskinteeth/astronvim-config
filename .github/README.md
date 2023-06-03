@@ -8,6 +8,12 @@
 
 ## 🌟 Screenshots
 
+<img width="1644" alt="SCR-20230602-rhba" src="https://github.com/aravezskinteeth/astronvim-config/assets/104392087/0789449b-ae36-4952-ae4d-86a03f3f7158">
+
+<img width="1644" alt="SCR-20230602-rhfs" src="https://github.com/aravezskinteeth/astronvim-config/assets/104392087/8da8d016-e235-4996-81be-5aa3cdf1de87">
+
+<img width="1644" alt="SCR-20230602-rihp" src="https://github.com/aravezskinteeth/astronvim-config/assets/104392087/21bde80e-2e05-484f-8b49-dc47da4f14ac">
+
 ## ✨ Features
 
 ### Core
