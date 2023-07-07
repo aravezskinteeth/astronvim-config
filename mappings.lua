@@ -89,9 +89,9 @@ return {
     -- map ctrl+enter send_text all \x1b[13;5u
     ["<c-cr>"] = { "<esc><Plug>SlimeSendCell<cr>i", desc = "Send code with ctrl and enter" },
     ["<s-cr>"] = { "<esc><Plug>SlimeSendCell<cr>i", desc = "Send code with shift and enter" },
-    ['<s-r>'] = { '```{r}<cr>```<esc>O', desc = "r code chunk" },
-    ['<s-p>'] = { '<esc>o```{python}<cr>```<esc>O', desc = "python code chunk" },
-    ['<s-b>'] = { 'o```{bash}<cr>```<esc>O', desc = "bash code chunk" },
-    ['<s-j>'] = { 'o```{julia}<cr>```<esc>O', desc = "julia code chunk" },
+    -- ['<s-r>'] = { '```{r}<cr>```<esc>O', desc = "r code chunk" },
+    -- ['<s-p>'] = { '<esc>o```{python}<cr>```<esc>O', desc = "python code chunk" },
+    -- ['<s-b>'] = { 'o```{bash}<cr>```<esc>O', desc = "bash code chunk" },
+    -- ['<s-j>'] = { 'o```{julia}<cr>```<esc>O', desc = "julia code chunk" },
   },
 }
