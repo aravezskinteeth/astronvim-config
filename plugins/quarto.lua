@@ -9,7 +9,7 @@ return {
           require 'otter.config'.setup{
             lsp = {
               hover = {
-                border = require 'misc.style'.border
+        border = require 'misc.style'.border
               }
             }
           }
