@@ -5,15 +5,16 @@ return {
       {
         'jmbuhr/otter.nvim',
         dev = false,
-        config = function ()
-          require 'otter.config'.setup{
-            lsp = {
-              hover = {
-        border = require 'misc.style'.border
-              }
+        dependencies = {
+          {'neovim/nvim-lspconfig'}
+        },
+        opts = {
+          lsp = {
+            hover = {
+              -- border = require 'misc.style'.border
             }
           }
-        end,
+        }
       },
       'neovim/nvim-lspconfig',
       'hrsh7th/nvim-cmp'
