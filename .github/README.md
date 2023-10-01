@@ -49,6 +49,20 @@
 
 ## 🛠️ Installation
 
+### Prequisites
+
+#### For AstroNvim
+
+#### For this config
+
+1. Download `glow` with you favorite packer manager.
+
+```shell
+brew install glow
+```
+
+2. Install Latex and Skim.
+
 ### Install AstroNvim
 
 #### Make a backup of your current nvim and shared folder
