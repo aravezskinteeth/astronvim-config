@@ -71,6 +71,11 @@
 - [bottom](https://github.com/ClementTsang/bottom) - process viewer toggle terminal (`<leader>tt`)
 - [Python](https://docs.brew.sh/Homebrew-and-Python) - python repl toggle terminal (`<leader>tp`)
 - [Node](https://formulae.brew.sh/formula/node) - Node is needed for a lot of the LSPs, and for the node repl toggle terminal (`<leader>tn`)
+#### For this config
+1. Download `glow` with you favorite packer manager.
+    ```shell
+    brew install glow
+    ```
 ### Install AstroNvim
 
 #### Make a backup of your current nvim and shared folder
