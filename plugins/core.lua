@@ -32,8 +32,8 @@ return {
       opts.section.buttons.val = {
         button("LDR n  ", "  New File  "),
         button("LDR f f", "  Find File  "),
-        button("LDR f o", "  Recents  "),
-        button("LDR f w", "  Find Word  "),
+        button("LDR f o", "󰈙  Recents  "),
+        button("LDR f w", "󰈭  Find Word  "),
         button("LDR f '", "  Bookmarks  "),
         button("LDR S l", "  Last Session  "),
       }
