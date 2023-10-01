@@ -53,16 +53,24 @@
 
 #### For AstroNvim
 
-#### For this config
+- [Nerd Fonts](https://www.nerdfonts.com/font-downloads). Note that if you're using kitty terminal is better to install an unpatched font. Then download **Symbols Nerd Font - Regular**.
 
-1. Download `glow` with you favorite packer manager.
+- [Neovim v.0.9+](https://github.com/neovim/neovim/releases/tag/stable). It's better to use a stable version and not *nightly*, Unless necessary, see issue [#2311](https://github.com/AstroNvim/AstroNvim/issues/2311#issuecomment-1742121088).
 
-```shell
-brew install glow
-```
+- [Tree-sitter CLI](https://github.com/tree-sitter/tree-sitter/blob/master/cli/README.md) (📝 *Note*: This is only necessary if you want to use `auto_install` feature with Treesitter).
 
-2. Install Latex and Skim.
+- A clipboard tool is necessary for the integration with the system clipboard (*see* `:help clipboard-tool` for supported solutions).
 
+- Terminal with true color support (for the default theme, otherwise it is dependent on the theme you are using).
+
+##### Optional Requirements:
+
+- [ripgrep](https://github.com/BurntSushi/ripgrep) - live grep telescope search (`<leader>fw`)
+- [lazygit](https://github.com/jesseduffield/lazygit) - git ui toggle terminal (`<leader>tl` or `<leader>gg`)
+- [go DiskUsage()](https://github.com/dundee/gdu) - disk usage toggle terminal (`<leader>tu`)
+- [bottom](https://github.com/ClementTsang/bottom) - process viewer toggle terminal (`<leader>tt`)
+- [Python](https://docs.brew.sh/Homebrew-and-Python) - python repl toggle terminal (`<leader>tp`)
+- [Node](https://formulae.brew.sh/formula/node) - Node is needed for a lot of the LSPs, and for the node repl toggle terminal (`<leader>tn`)
 ### Install AstroNvim
 
 #### Make a backup of your current nvim and shared folder
