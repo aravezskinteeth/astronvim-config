@@ -71,11 +71,15 @@
 - [bottom](https://github.com/ClementTsang/bottom) - process viewer toggle terminal (`<leader>tt`)
 - [Python](https://docs.brew.sh/Homebrew-and-Python) - python repl toggle terminal (`<leader>tp`)
 - [Node](https://formulae.brew.sh/formula/node) - Node is needed for a lot of the LSPs, and for the node repl toggle terminal (`<leader>tn`)
+
 #### For this config
+
 1. Download `glow` with you favorite packer manager.
     ```shell
     brew install glow
     ```
+2. [Install Latex and Skim](https://github.com/aravezskinteeth/astronvim-config/wiki/Latex-Support).
+
 ### Install AstroNvim
 
 #### Make a backup of your current nvim and shared folder
@@ -93,7 +97,7 @@ rm -rf  ~/.cache/nvim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 ```
 
-### Clone this repo
+#### Clone this repo
 
 ```shell
 git clone https://github.com/aravezskinteeth/astronvim-config ~/.config/nvim/lua/user && nvim
