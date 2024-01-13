@@ -61,7 +61,7 @@ return {
         "blue",                   -- Python code formatter.
         "autopep8",               -- Python code to conform to the PEP 8 style guide
         "beautysh",               -- A Bash beautifier for the masses.
-        "shellharden",            -- Shell
+        -- "shellharden",            -- Shell
         "markdownlint",           -- Markdown
         "cmakelang",              -- CMake
         "clang-format",           -- Clang
